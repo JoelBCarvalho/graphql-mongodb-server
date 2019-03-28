@@ -4,8 +4,6 @@ export default `
     name: String!
     email: String!
     age: Int!
-    posts: [Post!]!
-    comments: [Comment!]!
   }
 
   type Query {

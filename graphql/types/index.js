@@ -1,10 +1,21 @@
 import { mergeTypes } from "merge-graphql-schemas";
 
-import User from "./User/";
-import Post from "./Post/";
-import Comment from "./Comment/";
+import Routers from "./Routers/";
+import Routers_Trackers from "./Routers_Trackers/";
+import Scans from "./Scans/";
+import Trackers from "./Trackers/";
+import Rooms from "./Rooms/";
+import Nodes from "./Nodes/";
+import Maps from "./Maps/";
 
-const typeDefs = [User, Post, Comment];
+const typeDefs = [
+    Maps, 
+    Nodes, 
+    Rooms, 
+    Routers, 
+    Routers_Trackers, Scans, 
+    Trackers
+];
 
 // NOTE: 2nd param is optional, and defaults to false
 // Only use if you have defined the same type multiple times in
