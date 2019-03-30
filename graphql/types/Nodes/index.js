@@ -26,8 +26,8 @@ export default `
   }
   
   input UpdateNodeInput {
-    room: Rooms
-    router: Routers
+    room: ID!
+    router: ID!
     rfid: String
   }
 

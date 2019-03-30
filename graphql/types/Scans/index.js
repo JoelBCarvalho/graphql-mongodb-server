@@ -1,37 +1,35 @@
 export default `
   scalar Date
 
-  type Routers {
+  type Scans {
     _id: ID!
-    activation_link: String!
-    name: String
-    connected: Boolean
-    bt_active: Boolean
-    registered: Boolean
+    node: Nodes!
+    tracker: Trackers!
+    rssi: Int!
     created: Date!
   }
 
   type Query {
-    router(activation_link: String!): Routers!
-    routers: [Routers!]!
+    scan(_id: ID!): Scans!
+    scans: [Scans!]!
   }
 
   type Mutation {
-    createRouter(router: CreateRouterInput): Routers!
-    updateRouter(_id: ID!, router: UpdateRouterInput): Routers!
-    deleteRouter(_id: ID!): Routers!
+    createScan(scan: CreateScanInput): Scans!
+    updateScan(_id: ID!, scan: UpdateScanInput): Scans!
+    deleteScan(_id: ID!): Scans!
   }
 
-  input CreateRouterInput {
-    activation_link: String!
-    name: String
+  input CreateScanInput {
+    node: ID!
+    tracker: ID!
+    rssi: Int!
   }
   
-  input UpdateRouterInput {
-    name: String
-    connected: Boolean
-    bt_active: Boolean
-    registered: Boolean
+  input UpdateScanInput {
+    node: ID!
+    tracker: ID!
+    rssi: Int!
   }
 
   enum MutationType {

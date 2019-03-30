@@ -1,19 +1,20 @@
 import { mergeTypes } from "merge-graphql-schemas";
 
+import Maps from "./Maps/";
 import Routers from "./Routers/";
+import Nodes from "./Nodes/";
+import Rooms from "./Rooms/";
 import Routers_Trackers from "./Routers_Trackers/";
 import Scans from "./Scans/";
 import Trackers from "./Trackers/";
-import Rooms from "./Rooms/";
-import Nodes from "./Nodes/";
-import Maps from "./Maps/";
 
 const typeDefs = [
     Maps, 
-    Nodes, 
-    Rooms, 
-    Routers, 
-    Routers_Trackers, Scans, 
+    Routers,
+    Nodes,
+    Rooms,
+    Routers_Trackers,
+    Scans,
     Trackers
 ];
 

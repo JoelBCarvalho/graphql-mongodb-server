@@ -1,37 +1,29 @@
 export default `
   scalar Date
 
-  type Routers {
+  type Rooms {
     _id: ID!
-    activation_link: String!
     name: String
-    connected: Boolean
-    bt_active: Boolean
-    registered: Boolean
     created: Date!
   }
 
   type Query {
-    router(activation_link: String!): Routers!
-    routers: [Routers!]!
+    room(_id: ID!): Rooms!
+    rooms: [Rooms!]!
   }
 
   type Mutation {
-    createRouter(router: CreateRouterInput): Routers!
-    updateRouter(_id: ID!, router: UpdateRouterInput): Routers!
-    deleteRouter(_id: ID!): Routers!
+    createRoom(room: CreateRoomInput): Rooms!
+    updateRoom(_id: ID!, room: UpdateRoomInput): Rooms!
+    deleteRoom(_id: ID!): Rooms!
   }
 
-  input CreateRouterInput {
-    activation_link: String!
+  input CreateRoomInput {
     name: String
   }
   
-  input UpdateRouterInput {
+  input UpdateRoomInput {
     name: String
-    connected: Boolean
-    bt_active: Boolean
-    registered: Boolean
   }
 
   enum MutationType {

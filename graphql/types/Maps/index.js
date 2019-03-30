@@ -4,9 +4,9 @@ export default `
   type Maps {
     _id: ID!
     node: Nodes!
-    point: Number!
-    min_rssi: Number!
-    max_rssi: Number!
+    point: Int!
+    min_rssi: Int!
+    max_rssi: Int!
     created: Date!
   }
 
@@ -22,17 +22,17 @@ export default `
   }
 
   input CreateMapInput {
-    node: Nodes
-    point: Number
-    min_rssi: Number
-    max_rssi: Number
+    node: ID!
+    point: Int
+    min_rssi: Int
+    max_rssi: Int
   }
   
   input UpdateMapInput {
-    node: Nodes
-    point: Number
-    min_rssi: Number
-    max_rssi: Number
+    node: ID!
+    point: Int
+    min_rssi: Int
+    max_rssi: Int
   }
 
   enum MutationType {
