@@ -22,7 +22,8 @@ export default {
   Mutation: {
     createNode: async (parent, { node }, context, info) => {
       const newNode = await new Nodes({
-        rfid: u.rfid
+        router: node.router,
+        rfid: node.rfid
       });
       
       try {

@@ -21,7 +21,7 @@ export default `
   }
 
   input CreateNodeInput {
-    _id: ID!
+    router: ID!
     rfid: String
   }
   

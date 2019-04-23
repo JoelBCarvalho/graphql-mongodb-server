@@ -35,6 +35,46 @@ This is a server boilerplate using GraphQL and MongoDB. Support subscriptions us
 
 - `npm start` - start the playground at `http://localhost:4000/playground`
 
+## Query and mutation examples
+
+mutation($input: CreateRouterInput!) {
+  createRouter(router: $input) {_id}
+}
+
+{
+  "input": {
+    "activation_link": "dd"
+  }
+}
+
+query {
+  routers {
+    activation_link,
+    name,
+    connected,
+    bt_active,
+    registered,
+    created
+  }
+}
+
+mutation($input: UpdateRouterInput!) {
+  updateRouter(_id: "5ca0754f8e8a5c2b6723a404", router: $input) {_id}
+}
+
+{
+  "input": {
+    "name": "casa",
+    "connected": true,
+    "bt_active": true,
+    "registered": true
+  }
+}
+
+mutation {
+  deleteRouter(_id: "5ca0754f8e8a5c2b6723a404") {_id}
+}
+
 ## License
 
 MIT license, Copyright (c) 2018 Leonardo Maldonado.
