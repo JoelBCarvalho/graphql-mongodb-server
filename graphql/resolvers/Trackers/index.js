@@ -21,6 +21,7 @@ export default {
   Mutation: {
     createTracker: async (parent, { tracker }, context, info) => {
       const newTracker = await new Trackers({
+        name: tracker.name,
         mac: tracker.mac
       });
       

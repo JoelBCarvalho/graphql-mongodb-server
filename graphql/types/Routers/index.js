@@ -4,10 +4,10 @@ export default `
   type Routers {
     _id: ID!
     activation_link: String!
-    name: String
-    connected: Boolean
-    bt_active: Boolean
-    registered: Boolean
+    name: String!
+    connected: Boolean!
+    bt_active: Boolean!
+    registered: Boolean!
     created: Date!
   }
 
@@ -24,14 +24,14 @@ export default `
 
   input CreateRouterInput {
     activation_link: String!
-    name: String
+    name: String!
   }
   
   input UpdateRouterInput {
-    name: String
-    connected: Boolean
-    bt_active: Boolean
-    registered: Boolean
+    name: String!
+    connected: Boolean!
+    bt_active: Boolean!
+    registered: Boolean!
   }
 
   enum MutationType {

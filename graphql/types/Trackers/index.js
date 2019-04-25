@@ -3,7 +3,7 @@ export default `
 
   type Trackers {
     _id: ID!
-    name: String
+    name: String!
     mac: String!
     created: Date!
   }
@@ -20,12 +20,12 @@ export default `
   }
 
   input CreateTrackerInput {
-    name: String
+    name: String!
     mac: String!
   }
   
   input UpdateTrackerInput {
-    name: String
+    name: String!
     mac: String!
   }
 

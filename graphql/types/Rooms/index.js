@@ -3,7 +3,7 @@ export default `
 
   type Rooms {
     _id: ID!
-    name: String
+    name: String!
     created: Date!
   }
 
@@ -19,11 +19,11 @@ export default `
   }
 
   input CreateRoomInput {
-    name: String
+    name: String!
   }
   
   input UpdateRoomInput {
-    name: String
+    name: String!
   }
 
   enum MutationType {

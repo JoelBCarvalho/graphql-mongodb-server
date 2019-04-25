@@ -24,7 +24,8 @@ export default {
   Mutation: {
     createRouter: async (parent, { router }, context, info) => {
       const newRouter = await new Routers({
-        activation_link: router.activation_link
+        activation_link: router.activation_link,
+        name: router.name
       });
       
       try {
